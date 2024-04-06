@@ -1,0 +1,18 @@
+﻿@model IEnumerable<cumulative1http5125.Models.Students>
+
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List of Students Enrolled</h2>
+
+@{ 
+    foreach (cumulative1http5125.Models.Students students in Model)
+            {
+                <div>
+                    <a href="/Student/Show/@students.studentid">@students.studentfname @students.studentlname</a>
+                </div>
+            }
+}
+

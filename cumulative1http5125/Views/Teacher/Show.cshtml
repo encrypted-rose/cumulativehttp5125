@@ -1,0 +1,19 @@
+﻿@model cumulative1http5125.Models.Teacher
+
+@{
+    ViewBag.Title = "Show";
+}
+
+<nav>
+    <form action="/Teacher/List">
+        <input type="submit" value="Return to Main List" />
+    </form>
+    <a style="color: darkred" href="/Teacher/ConfirmDelete/@Model.teacherid">Delete</a>
+</nav>
+
+<div id="container">
+    <h2>@Model.teacherfname @Model.teacherlname</h2>
+    <p><b>Employee Number:</b> @Model.employeenumber</p>
+    <p><b>Hire Date:</b> @Model.hiredate</p>
+</div>
+

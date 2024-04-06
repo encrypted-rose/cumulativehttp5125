@@ -1,0 +1,29 @@
+﻿@model IEnumerable<cumulative1http5125.Models.Teacher>
+
+
+@{
+    ViewBag.Title = "List";
+}
+
+
+<h2>Teachers</h2>
+
+<form action="/Teacher/New">
+    <input type="submit" value="Add new Teacher" />
+</form>
+
+<form acrion="/Teacher/List" method="get">
+    <input type="text" name="SearchKey"/>
+    <button>Search</button>
+
+</form>
+
+@{
+    foreach (cumulative1http5125.Models.Teacher Teacher in Model)
+            {
+                <div class="list-view">
+                    <a href="/Teacher/Show/@Teacher.teacherid">@Teacher.teacherfname @Teacher.teacherlname</a> 
+                </div>
+            }
+
+}

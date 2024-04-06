@@ -1,0 +1,18 @@
+﻿@model IEnumerable<cumulative1http5125.Models.Classes>
+
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List of Available Classes</h2>
+
+@{ 
+    foreach (cumulative1http5125.Models.Classes classes in Model)
+            {
+                <div>
+                    <a href="/Classes/Show/@classes.classid">@classes.classname</a>
+                </div>
+            }
+}
+
